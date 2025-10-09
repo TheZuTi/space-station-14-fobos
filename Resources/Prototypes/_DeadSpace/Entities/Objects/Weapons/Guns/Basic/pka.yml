@@ -29,10 +29,10 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
     state: icon
   - type: Item
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
     shape:
     - 0,0,2,1
   - type: RechargeBasicEntityAmmo
@@ -40,7 +40,7 @@
     rechargeSound:
       path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
   - type: Clothing
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
     quickEquip: false
     slots:
     - suitStorage
@@ -81,11 +81,11 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shotgunpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shotgunpka.rsi
     state: icon
     scale: 1.2, 1.2
   - type: Item
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shotgunpkahand64.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shotgunpkahand64.rsi
     shape:
     - 0,0,3,1
     heldPrefix: energy
@@ -94,7 +94,7 @@
     rechargeSound:
       path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
   - type: Clothing
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shotgunpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shotgunpka.rsi
     quickEquip: false
     slots:
     - suitStorage
@@ -137,17 +137,17 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
     state: icon
   - type: Item
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
     size: Small
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 0.5
     rechargeSound:
       path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
   - type: Clothing
-    sprite: /_DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shortpka.rsi
     quickEquip: false
     slots:
     - suitStorage
