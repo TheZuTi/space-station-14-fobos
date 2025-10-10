@@ -527,17 +527,3 @@
       state: shuttle
   - type: EscapeShuttleCondition
 
-#DS14 start
-
-- type: entity
-  parent: BaseThiefStealObjective
-  id: WeaponSeniorKinetikStealObjective
-  components:
-  - type: NotJobRequirement
-    job: SeniorSalvageSpecialist
-  - type: StealCondition
-    stealGroup: WeaponSeniorKinetik
-  - type: Objective
-    difficulty: 1
-
-#DS14 end

@@ -263,17 +263,6 @@
     sprite: Objects/Specific/Chapel/bible.rsi
     state: icon
 
-#DS14 start
-
-- type: stealTargetGroup
-  id: WeaponSeniorKinetik
-  name: steal-target-groups-seniorpka
-  sprite:
-    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/seniorpka.rsi
-    state: icon
-  
-#DS14 end
-
 - type: stealTargetGroup
   id: ClothingNeckGoldmedal
   name: steal-target-groups-clothing-neck-goldmedal
