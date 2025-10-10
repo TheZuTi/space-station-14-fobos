@@ -25,6 +25,15 @@
         {
             "name": "equipped-SUITSTORAGE",
             "directions": 4
+        },
+        {
+            "name": "animation-icon",
+            "delays": [
+                [
+                    0.2,
+                    0.2
+                ]
+            ]
         }
     ]
 }

@@ -30,7 +30,11 @@
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
-    state: icon
+    layers:
+    - state: icon
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
   - type: Item
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/reapeterpka.rsi
     shape:
@@ -85,8 +89,12 @@
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shotgunpka.rsi
-    state: icon
-    scale: 1.2, 1.2
+    layers:
+    - state: icon
+      scale: 1.2, 1.2
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
   - type: Item
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/shotgunpkahand64.rsi
     shape:
@@ -144,7 +152,11 @@
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: Sprite
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/sawnpka.rsi
-    state: icon
+    layers:
+    - state: icon
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
   - type: Item
     sprite: _DeadSpace/Objects/Weapons/Guns/Basic/sawnpka.rsi
     size: Small

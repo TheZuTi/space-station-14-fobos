@@ -8,10 +8,8 @@
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
-        Blunt: 8 # Юзабельность дробивка в близи против фауны
-        Structural: 30 # Это сделано в угоду копание дробовиком, а не гиба КПБ
-
-#Одна часть для дробовика-кинетика, что позволяет стрелять как дробовик
+        Blunt: 8 
+        Structural: 30 
 
 - type: entity
   name: wide bolt
