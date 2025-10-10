@@ -1,25 +1,15 @@
 - type: entity
   name: bolt
   id: BulletKineticShotgun
-  parent: BaseBullet
+  parent: BulletKinetic
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    noRot: false
-    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
-    layers:
-    - state: chronobolt
-      shader: unshaded
-  - type: Ammo
   - type: Projectile
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
         Blunt: 8 # Юзабельность дробивка в близи против фауны
         Structural: 30 # Это сделано в угоду копание дробовиком, а не гиба КПБ
-  - type: TimedDespawn
-    lifetime: 0.25 # roughly 5.5 tiles
-  - type: GatheringProjectile
 
 #Одна часть для дробовика-кинетика, что позволяет стрелять как дробовик
 
