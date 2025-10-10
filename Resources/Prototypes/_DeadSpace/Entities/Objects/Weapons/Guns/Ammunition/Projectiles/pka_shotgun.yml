@@ -10,7 +10,11 @@
       types:
         Blunt: 8 
         Structural: 30 
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3bf09f341bd4af0d18c6bad90bb57f16d8a0adc8
 - type: entity
   name: wide bolt
   id: BulletKineticShotgunSpread
