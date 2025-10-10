@@ -40,6 +40,7 @@ steal-target-groups-salvage-expeditions-computer-circuitboard = плата ко�
 steal-target-groups-cargo-shuttle-console-circuitboard = плата консоли управления грузовым шаттлом
 steal-target-groups-clothing-eyes-hud-beer = пивные очки
 steal-target-groups-bible = библия
+steal-target-groups-seniorpka = продвинутый протокинетический ускоритель
 steal-target-groups-clothing-neck-goldmedal = золотая медаль мастерства экипажа
 steal-target-groups-clothing-neck-clownmedal = медаль клоуна
 steal-target-groups-wanted-list-cartridge = картридж Список разыскиваемых

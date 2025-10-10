@@ -182,3 +182,75 @@
     containers:
       upgrades: !type:Container
 
+- type: entity
+  id: WeaponSeniorKinetik
+  parent: [ BaseItem, BaseCargoContraband ] 
+  name: продвинутый протокинетический ускоритель
+  description: Специальная модификация протокинетического ускорителя, представляющая из себя ослабленный в угоду компактности гибрид протокинетических повторителя и дробовика с выбором режима работы между ними. Спроектирован для повышения эффективности работы ведущих утилизаторов объектов NanoTrasen.
+  components:
+  - type: AmmoCounter
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.AmmoVisuals.HasAmmo:
+        empty-icon:
+          True: { visible: False }
+          False: { visible: True }
+        #todo: add other 'empty' animations
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletKinetic
+    fireCost: 50
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    minAngle: 0
+    maxAngle: 4
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+  - type: Sprite
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/seniorpka.rsi
+    layers:
+    - state: icon
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
+  - type: Item
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/seniorpka.rsi
+    shape:
+    - 0,0,2,1
+    size: Large
+  - type: RechargeBasicEntityAmmo
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: Clothing
+    sprite: _DeadSpace/Objects/Weapons/Guns/Basic/seniorpka.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: UpgradeableGun
+    whitelist:
+      tags:
+      - PKAUpgrade
+  - type: ContainerContainer
+    containers:
+      upgrades: !type:Container
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletKinetic
+      fireCost: 50
+    - proto: BulletKineticSeniorSpread
+      fireCost: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+    autoRechargePause: true
+    autoRechargePauseTime: 1
+  - type: Battery
+    maxCharge: 100
+    startingCharge: 100
+  - type: StealTarget
+    stealGroup: WeaponSeniorKinetik

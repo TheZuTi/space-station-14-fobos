@@ -21,3 +21,14 @@
     proto: BulletKineticShotgun
     count: 5 
     spread: 23
+
+- type: entity
+  name: кинетичеcкий разрыв
+  id: BulletKineticSeniorSpread
+  categories: [ HideSpawnMenu ]
+  parent: BulletKineticShotgun
+  components:
+  - type: ProjectileSpread
+    proto: BulletKineticShotgun
+    count: 3 
+    spread: 23

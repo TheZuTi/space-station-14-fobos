@@ -86,6 +86,7 @@
     BibleStealObjective: 1
     ClothingNeckGoldmedalStealObjective: 1              #other
     ClothingNeckClownmedalStealObjective: 0.5
+    WeaponSeniorKinetikStealObjective: 1                #DS14
 
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure
