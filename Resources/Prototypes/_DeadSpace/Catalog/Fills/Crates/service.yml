@@ -13,7 +13,7 @@
   id: CrateServiceBoxGrenadeCleanade
   parent: CratePlastic
   name: ящик с чистящими снарядами
-  description: Ящик с двуями коробками специальных снарядов под установку "Гидра"
+  description: Ящик с двуями коробками специальных снарядов под установку "Гидра".
   components:
   - type: StorageFill
     contents:
