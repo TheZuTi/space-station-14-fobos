@@ -85,7 +85,6 @@
     - id: LightReplacer
     - id: BoxLightMixed
     - id: Holoprojector
-    - id: WeaponLauncherHydra #DS14
     - !type:AllSelector
       rolls: 2
       children:
