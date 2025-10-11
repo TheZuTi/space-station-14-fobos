@@ -2,7 +2,7 @@
   parent: BoxCardboard
   id: BoxGrenadeCleanade
   name: коробка чистящих снарядов
-  description: Коробка, что заполнена чистящими снарядами
+  description: Коробка, что заполнена чистящими снарядами.
   components:
   - type: StorageFill
     contents:
