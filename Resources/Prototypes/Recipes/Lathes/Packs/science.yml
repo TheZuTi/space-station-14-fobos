@@ -43,8 +43,8 @@
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
-  - ClothingShoesBootsMagSuper #DS14
-  - JetBootsMiner #DS14
+  - ClothingShoesBootsMagSuper # DS14
+  - JetBootsMiner # DS14
 
 - type: latheRecipePack
   id: PowerCells
