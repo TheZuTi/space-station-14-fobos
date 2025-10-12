@@ -332,7 +332,6 @@
   - type: Clothing
     sprite: Clothing/Belt/medical.rsi
   - type: Storage
-    maxItemSize: Large
     whitelist:
       tags:
         - Wrench
@@ -348,7 +347,6 @@
         - DiscreteHealthAnalyzer
         - SurgeryTool
         - Dropper
-        - Medkit
       components:
         - Hypospray
         - Injector
