@@ -2,7 +2,7 @@
 
 - type: technology
   id: ClothingShoesBootsMagSuperTech
-  name: Улучшенный локализованный магнетизм
+  name: research-technology-supermagboots
   icon:
     sprite: _DeadSpace/Clothing/Shoes/Boots/super_mag_boots.rsi
     state: icon

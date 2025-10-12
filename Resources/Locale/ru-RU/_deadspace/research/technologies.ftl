@@ -1,0 +1,1 @@
+research-technology-supermagboots = Улучшенный локализованный магнетизм
