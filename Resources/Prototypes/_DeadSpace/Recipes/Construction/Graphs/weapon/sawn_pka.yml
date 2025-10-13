@@ -1,5 +1,3 @@
-# Взаимодействия пилки с обычным кинетиком
-
 - type: constructionGraph
   id: ShotgunSawnKinetik
   start: startkinetik
