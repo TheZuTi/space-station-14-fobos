@@ -1,6 +1,6 @@
 - type: entity
-  parent: [ JetpackMiniFilled, ClothingShoesBase ]
-  id: JetBootsMiner
+  parent: [ JetpackMini, ClothingShoesBase ]
+  id: JetBoots
   name: джет-бутсы
   description: Ботинки, лишённые локализованного магнитного захватом взамен на встроенный джет с хорошим объёмом газа.
   components:
