@@ -13,14 +13,9 @@
     Uranium: 1000
     Gold: 2500
 
-- type: latheRecipePack
-  id: JetBootsMiner
-  recipes:
-  - JetBootsMiner
-
 - type: latheRecipe
-  id: JetBootsMiner
-  result: JetBootsMiner
+  id: JetBoots
+  result: JetBoots
   completetime: 2
   materials:
     Steel: 1500
