@@ -1,6 +1,9 @@
 ent-ClothingBackpackDuffelSyndicateFilledSMGTommyGun = { ent-ClothingBackpackDuffelSyndicateBundle }
     .desc = { ent-ClothingBackpackDuffelSyndicateBundle.desc }
+    .suffix = Набор пистолет-пулемёта Томпсона
 ent-ClothingBackpackDuffelSyndicateFilledSMGTommyGunAgent = { ent-ClothingBackpackDuffelSyndicateBundle }
     .desc = { ent-ClothingBackpackDuffelSyndicateBundle.desc }
+    .suffix = Набор с агентским пистолет-пулемётом Томпсона
 ent-ClothingBackpackDuffelSyndicateFilledSMGTommyGunAmmoXL = { ent-ClothingBackpackDuffelSyndicateBundle }
     .desc = { ent-ClothingBackpackDuffelSyndicateBundle.desc }
+    .suffix = Набор с дополнительными магазинами пистолет-пулемёта Томпсона
