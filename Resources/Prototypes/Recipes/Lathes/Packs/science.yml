@@ -57,10 +57,10 @@
   - WeaponPistolCHIMP
   - WeaponForceGun
   - WeaponProtoKineticAccelerator
-#DS14 start
+# DS14 start
   - WeaponProtoKineticAcceleratorShotgun
   - WeaponProtoKineticAcceleratorReapeter
-#DS14 end
+# DS14 end
   - PKAUpgradeDamage
   - PKAUpgradeRange
   - PKAUpgradeFireRate
