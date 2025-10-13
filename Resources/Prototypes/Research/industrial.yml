@@ -28,7 +28,7 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
-  - JetBootsMiner # DS14
+  - JetBoots # DS14
 
 - type: technology
   id: AdvancedPowercells
