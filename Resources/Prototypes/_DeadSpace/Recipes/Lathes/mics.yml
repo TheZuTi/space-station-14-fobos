@@ -1,8 +1,3 @@
-- type: latheRecipePack
-  id: ClothingShoesBootsMagSuper
-  recipes:
-  - ClothingShoesBootsMagSuper
-
 - type: latheRecipe
   id: ClothingShoesBootsMagSuper
   result: ClothingShoesBootsMagSuper
