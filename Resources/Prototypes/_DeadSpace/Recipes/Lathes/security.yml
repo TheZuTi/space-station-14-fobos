@@ -18,8 +18,8 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
-  id: ShotgunDominator
-  result: ShotgunDominator
+  id: PhotonShotgun
+  result: PhotonShotgun
   materials:
     Steel: 3000
     Plastic: 1750
