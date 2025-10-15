@@ -49,11 +49,6 @@
     FacialHair:
       points: 1
       required: false
-# DS14-start
-    HeadSide:
-      points: 1
-      required: false
-# DS14-end
     Snout:
       points: 1
       required: false
