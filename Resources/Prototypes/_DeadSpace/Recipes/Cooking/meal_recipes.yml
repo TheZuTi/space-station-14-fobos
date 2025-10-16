@@ -250,7 +250,8 @@
   group: Soup
   reagents:
     Water: 10
-    Hotsauce: 10
+    Hotsauce: 5
+    TableSalt: 5
     Blackpepper: 10
   solids:
     FoodBowlBig: 1
