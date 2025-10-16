@@ -53,18 +53,16 @@
     groups:
     - id: Gas
       rateModifier: 100.0
-# DS14-start
   - type: SolutionContainerManager
     solutions:
       Lung:
-        maxVol: 1
+        maxVol: 100.0
         canReact: false
       food:
-        maxVol: 1
+        maxVol: 1 # DS14
         reagents:
         - ReagentId: UncookedAnimalProteins
-          Quantity: 1
-# DS14-end
+          Quantity: 1 # DS14
   - type: Item
     size: Small
     heldPrefix: lungs
