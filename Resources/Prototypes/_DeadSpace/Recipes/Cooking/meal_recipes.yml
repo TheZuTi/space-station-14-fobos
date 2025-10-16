@@ -269,6 +269,8 @@
     FoodOnionSlice: 2
     FoodEgg: 2
     FoodCheeseSlice: 1
+
+- type: microwaveMealRecipe
   id: RecipeSakuraCake
   name: sakura cake recipe
   result: FoodSakuraCake
