@@ -255,7 +255,7 @@
   solids:
     FoodBowlBig: 1
     FoodNoodlesBoiled: 1
-    FoodMeatMeatball: 2
+    FoodMeatFish: 2
   
 - type: microwaveMealRecipe
   id: RecipeFoodPizzaSassysage
