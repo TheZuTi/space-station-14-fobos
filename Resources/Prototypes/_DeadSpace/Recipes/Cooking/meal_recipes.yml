@@ -250,8 +250,7 @@
   group: Soup
   reagents:
     Water: 10
-    Soysauce: 10
-    TableSalt: 5
+    Soysauce: 15
     Blackpepper: 5
   solids:
     FoodBowlBig: 1
