@@ -265,7 +265,7 @@
   group: Pizza
   solids:
     FoodDoughFlat: 1
-    FoodMeatMeatball: 2
+    ADTFoodSausageRaw: 2
     FoodOnionSlice: 2
     FoodEgg: 2
     FoodCheeseSlice: 1
