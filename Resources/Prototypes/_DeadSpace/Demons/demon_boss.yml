@@ -86,6 +86,9 @@
         Brute: -4
         Burn: -4
   - type: NoSlip
+  - type: Damageable
+    damageModifierSet: SlaughterDemon
+    damageContainer: BiologicalMetaphysical
 
 - type: entity
   parent: BaseMobDemonBoss
