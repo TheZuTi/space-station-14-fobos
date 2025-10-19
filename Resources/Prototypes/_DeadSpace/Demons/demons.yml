@@ -81,6 +81,7 @@
         Burn: -2
   - type: TTS
     voice: Avozu
+  - type: NoSlip
 
 - type: entity
   parent: BaseMobDemonRS

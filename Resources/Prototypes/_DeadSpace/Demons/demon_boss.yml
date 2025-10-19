@@ -85,6 +85,7 @@
       groups:
         Brute: -4
         Burn: -4
+  - type: NoSlip
 
 - type: entity
   parent: BaseMobDemonBoss
