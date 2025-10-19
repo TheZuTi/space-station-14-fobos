@@ -1,6 +1,6 @@
 
 - type: entity
-  parent: SimpleSpaceMobBase
+  parent: BaseMobAsteroid
   id: BaseMobDemonRS
   name: демон
   description: Монстр!
@@ -41,11 +41,6 @@
       100: Dead
   - type: Stamina
   - type: Appearance
-  - type: Bloodstream
-    bloodReagent: DemonsBlood
-    bloodMaxVolume: 200
-    bloodlossThreshold: 0.3
-    bloodRefreshAmount: 2
   - type: CombatMode
   - type: MeleeWeapon
     altDisarm: false
@@ -53,8 +48,6 @@
     angle: 45
     soundHit:
         path: /Audio/Effects/demon_attack1.ogg
-        params:
-          volume: -100
     animation: WeaponArcClaw
     damage:
       types:
@@ -119,8 +112,6 @@
     angle: 45
     soundHit:
         path: /Audio/Effects/demon_attack1.ogg
-        params:
-          volume: -100
     animation: WeaponArcClaw
     damage:
       types:
@@ -165,8 +156,6 @@
     angle: 45
     soundHit:
         path: /Audio/Items/bikehorn.ogg
-        params:
-          volume: -100
     animation: WeaponArcClaw
     damage:
       types:
