@@ -250,8 +250,8 @@
   group: Soup
   reagents:
     Water: 10
-    Hotsauce: 10
-    Blackpepper: 10
+    Soysauce: 15
+    Blackpepper: 5
   solids:
     FoodBowlBig: 1
     FoodNoodlesBoiled: 1
@@ -265,7 +265,7 @@
   group: Pizza
   solids:
     FoodDoughFlat: 1
-    FoodMeatMeatball: 2
+    ADTFoodSausageRaw: 2
     FoodOnionSlice: 2
     FoodEgg: 2
     FoodCheeseSlice: 1
