@@ -1,11 +1,19 @@
 meta:
   format: 7
   category: Map
+<<<<<<< HEAD
   engineVersion: 267.2.0
   forkId: ""
   forkVersion: ""
   time: 12/14/2025 18:25:05
   entityCount: 3156
+=======
+  engineVersion: 270.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 12/29/2025 08:52:17
+  entityCount: 3158
+>>>>>>> upstream-wizards/master
 maps:
 - 23
 grids:
@@ -1620,6 +1628,7 @@ entities:
     - type: BecomesStation
       id: Dev
     - type: ImplicitRoof
+    - type: ExplosionAirtightGrid
   - uid: 23
     components:
     - type: MetaData
@@ -1721,6 +1730,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: ImplicitRoof
+    - type: ExplosionAirtightGrid
   - uid: 2869
     components:
     - type: MetaData
@@ -1984,14 +1994,6 @@ entities:
     components:
     - type: Transform
       pos: 33.5,48.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-  - uid: 1220
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 51.5,37.5
       parent: 1
     - type: Fixtures
       fixtures: {}
@@ -2943,6 +2945,15 @@ entities:
     - type: Transform
       pos: 37.5,42.5
       parent: 1
+    - type: Fixtures
+      fixtures: {}
+- proto: BaseAPC
+  entities:
+  - uid: 2753
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 2709
     - type: Fixtures
       fixtures: {}
 - proto: BaseBallBat
@@ -6303,6 +6314,11 @@ entities:
     components:
     - type: Transform
       pos: 77.5,11.5
+      parent: 1
+  - uid: 3158
+    components:
+    - type: Transform
+      pos: 52.5,37.5
       parent: 1
 - proto: CableApcStack
   entities:
@@ -9816,13 +9832,25 @@ entities:
     - type: Transform
       pos: 70.5,15.5
       parent: 1
-- proto: DebugAPC
+- proto: DebugAPCRecharging
   entities:
-  - uid: 2753
+  - uid: 1220
     components:
     - type: Transform
-      pos: -0.5,1.5
-      parent: 2709
+      rot: 3.141592653589793 rad
+      pos: 51.5,37.5
+      parent: 1
+    - type: AccessReader
+      accessListsOriginal:
+      - - Engineering
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2115
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 52.5,37.5
+      parent: 1
     - type: Fixtures
       fixtures: {}
 - proto: DebugGenerator
@@ -9836,15 +9864,6 @@ entities:
       supplyRampRate: 500000
       supplyRampTolerance: 5000
       supplyRate: 3000000
-- proto: DebugSubstation
-  entities:
-  - uid: 2296
-    components:
-    - type: Transform
-      pos: 43.5,32.5
-      parent: 1
-    - type: Battery
-      maxCharge: 25000000
 - proto: DefaultStationBeaconMedical
   entities:
   - uid: 2882
@@ -15820,6 +15839,15 @@ entities:
     - type: Transform
       pos: 77.5,6.5
       parent: 1
+- proto: SubstationBasicEmpty
+  entities:
+  - uid: 2296
+    components:
+    - type: Transform
+      pos: 43.5,32.5
+      parent: 1
+    - type: Battery
+      maxCharge: 25000000
 - proto: SubstationWallBasic
   entities:
   - uid: 2800

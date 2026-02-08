@@ -1,11 +1,19 @@
 meta:
   format: 7
   category: Map
+<<<<<<< HEAD
   engineVersion: 267.2.0
   forkId: ""
   forkVersion: ""
   time: 01/08/2026 05:21:13
   entityCount: 2587
+=======
+  engineVersion: 270.1.0
+  forkId: ""
+  forkVersion: ""
+  time: 01/13/2026 00:18:31
+  entityCount: 2641
+>>>>>>> upstream-wizards/master
 maps:
 - 1
 grids:
@@ -1307,6 +1315,7 @@ entities:
         - volume: 2500
           immutable: True
           moles: {}
+<<<<<<< HEAD
         - volume: 2500
           temperature: 293.14975
           moles:
@@ -1320,16 +1329,32 @@ entities:
           temperature: 293.15
           moles:
             Oxygen: 6666.982
+=======
+        - volume: 2500
+          temperature: 293.15
+          moles:
+            Oxygen: 21.824879
+            Nitrogen: 82.10312
+        - volume: 2500
+          temperature: 293.15
+          moles:
+            Nitrogen: 6666.982
+>>>>>>> upstream-wizards/master
         - volume: 2500
           temperature: 293.1492
           moles:
+<<<<<<< HEAD
             Oxygen: 18.472576
             Nitrogen: 69.49208
+=======
+            Oxygen: 6666.982
+>>>>>>> upstream-wizards/master
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: SpreaderGrid
     - type: ImplicitRoof
+    - type: ExplosionAirtightGrid
 - proto: AirAlarm
   entities:
   - uid: 3
@@ -1340,9 +1365,15 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1554
       - 1524
       - 1556
+=======
+      - 1503
+      - 1473
+      - 1505
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 4
@@ -1353,8 +1384,13 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1523
       - 1555
+=======
+      - 1472
+      - 1504
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 5
@@ -1365,6 +1401,7 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1566
       - 1538
       - 1539
@@ -1373,6 +1410,16 @@ entities:
       - 1543
       - 1542
       - 1544
+=======
+      - 1515
+      - 1487
+      - 1488
+      - 1461
+      - 1463
+      - 1492
+      - 1491
+      - 1493
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 6
@@ -1382,8 +1429,13 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1515
       - 1540
+=======
+      - 1464
+      - 1489
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 7
@@ -1394,12 +1446,21 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1534
       - 1545
       - 1535
       - 1546
       - 1552
       - 1515
+=======
+      - 1484
+      - 1494
+      - 1485
+      - 1495
+      - 1501
+      - 1464
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 8
@@ -1410,12 +1471,21 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1531
       - 1549
       - 1550
       - 1530
       - 1551
       - 1532
+=======
+      - 1480
+      - 1498
+      - 1499
+      - 1479
+      - 1500
+      - 1481
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 9
@@ -1426,6 +1496,7 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1547
       - 1526
       - 1529
@@ -1463,6 +1534,13 @@ entities:
       - 1142
       - 1141
       - 1140
+=======
+      - 1496
+      - 1475
+      - 1478
+      - 1474
+      - 1477
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 12
@@ -1473,11 +1551,19 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1518
       - 1517
       - 1560
       - 1516
       - 1127
+=======
+      - 1467
+      - 1466
+      - 1509
+      - 1465
+      - 1077
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
   - uid: 13
@@ -1488,6 +1574,7 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1533
       - 1553
       - 1522
@@ -1504,16 +1591,110 @@ entities:
     - type: Fixtures
       fixtures: {}
   - uid: 14
+=======
+      - 1482
+      - 1502
+      - 1471
+      - 1469
+      - 1455
+      - 1490
+      - 1516
+      - 1088
+      - 1087
+      - 1086
+      - 1097
+      - 1096
+      - 1083
+    - type: Fixtures
+      fixtures: {}
+  - uid: 1753
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,8.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 1507
+      - 1470
+      - 1100
+      - 1098
+      - 1099
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2366
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 16.5,3.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 1443
+      - 1483
+      - 2562
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2500
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 2.5,-10.5
       parent: 2
     - type: DeviceList
       devices:
+<<<<<<< HEAD
       - 1565
       - 1504
       - 1505
       - 1537
+=======
+      - 1514
+      - 1453
+      - 1454
+      - 1486
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2575
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 16.5,6.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 551
+      - 2330
+      - 2563
+      - 2564
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2621
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 20.5,4.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 2562
+      - 2563
+      - 2564
+      - 1456
+      - 1512
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2623
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 19.5,-1.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 2622
+      - 1457
+>>>>>>> upstream-wizards/master
     - type: Fixtures
       fixtures: {}
 - proto: AirCanister
@@ -1815,21 +1996,33 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 58
+=======
+  - uid: 57
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: -18.5,5.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 59
+=======
+  - uid: 58
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: -6.5,2.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 60
+=======
+  - uid: 59
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1837,7 +2030,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 61
+=======
+  - uid: 60
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1845,7 +2042,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 62
+=======
+  - uid: 61
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -1853,21 +2054,33 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 63
+=======
+  - uid: 62
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 9.5,-1.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 64
+=======
+  - uid: 63
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 4.5,6.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 65
+=======
+  - uid: 64
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -1875,20 +2088,38 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 66
+=======
+  - uid: 65
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 9.5,17.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 67
+=======
+  - uid: 66
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 4.5,-9.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+  - uid: 67
+    components:
+    - type: Transform
+      pos: 17.5,2.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
   - uid: 68
     components:
     - type: Transform
@@ -1897,15 +2128,34 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: APECircuitboard
+  entities:
+>>>>>>> upstream-wizards/master
   - uid: 69
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 17.5,5.5
       parent: 2
+<<<<<<< HEAD
     - type: Fixtures
       fixtures: {}
 - proto: APECircuitboard
+=======
+- proto: ArrivalsShuttleTimer
+  entities:
+  - uid: 2639
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,17.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: Ashtray
+>>>>>>> upstream-wizards/master
   entities:
   - uid: 70
     components:
@@ -6229,6 +6479,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
 - proto: ClosetBombFilled
   entities:
   - uid: 920
@@ -6236,6 +6487,8 @@ entities:
     - type: Transform
       pos: 14.5,5.5
       parent: 2
+=======
+>>>>>>> upstream-wizards/master
 - proto: ClosetChefFilled
   entities:
   - uid: 921
@@ -6327,14 +6580,22 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 934
+=======
+  - uid: 894
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: -5.5,2.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 935
+=======
+  - uid: 895
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 11.5,6.5
@@ -6350,7 +6611,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 937
+=======
+  - uid: 897
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 12.5,6.5
@@ -6366,7 +6631,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
 - proto: ClosetWallOrange
+=======
+- proto: ClothingBackpackERTJanitor
+>>>>>>> upstream-wizards/master
   entities:
   - uid: 939
     components:
@@ -7033,7 +7302,11 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1033
+=======
+  - uid: 984
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -7466,7 +7739,25 @@ entities:
   - uid: 1104
     components:
     - type: Transform
+<<<<<<< HEAD
       pos: 23.5,-3.5
+=======
+      pos: 21.5,-3.5
+      parent: 2
+- proto: DoorRemoteCustom
+  entities:
+  - uid: 1056
+    components:
+    - type: Transform
+      pos: 24.562723,2.0902877
+      parent: 2
+- proto: DrinkMugRainbow
+  entities:
+  - uid: 2605
+    components:
+    - type: Transform
+      pos: 15.158241,10.521398
+>>>>>>> upstream-wizards/master
       parent: 2
 - proto: DrinkVodkaBottleFull
   entities:
@@ -7566,14 +7857,22 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1119
+=======
+  - uid: 2458
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 7.5,-9.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1120
+=======
+  - uid: 2459
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 1.5,-9.5
@@ -12012,6 +12311,18 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: IntercomSecurity
+  entities:
+  - uid: 2554
+    components:
+    - type: Transform
+      pos: 12.5,11.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
 - proto: JanitorialTrolley
   entities:
   - uid: 1712
@@ -12103,6 +12414,41 @@ entities:
     - type: Transform
       pos: -3.2942157,5.421692
       parent: 2
+<<<<<<< HEAD
+=======
+- proto: LockableButtonSecurity
+  entities:
+  - uid: 2617
+    components:
+    - type: Transform
+      pos: 13.5,11.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        2596:
+        - - Pressed
+          - Toggle
+        2610:
+        - - Pressed
+          - Toggle
+        2611:
+        - - Pressed
+          - Toggle
+        2612:
+        - - Pressed
+          - Toggle
+        2613:
+        - - Pressed
+          - Toggle
+        2614:
+        - - Pressed
+          - Toggle
+        2615:
+        - - Pressed
+          - Toggle
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
 - proto: LockerAtmosphericsFilledHardsuit
   entities:
   - uid: 1723
@@ -12337,6 +12683,16 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: LootSpawnerRandomLockbox
+  entities:
+  - uid: 1841
+    components:
+    - type: Transform
+      pos: 10.5,-8.5
+      parent: 2
+>>>>>>> upstream-wizards/master
 - proto: MachineArtifactAnalyzer
   entities:
   - uid: 1743
@@ -12858,28 +13214,44 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1804
+=======
+  - uid: 1710
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 10.5,17.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1805
+=======
+  - uid: 1711
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 4.5,17.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1806
+=======
+  - uid: 1712
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 10.5,6.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1807
+=======
+  - uid: 1713
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 26.5,-1.5
@@ -13708,28 +14080,44 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1920
+=======
+  - uid: 1831
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: -15.5,-1.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1921
+=======
+  - uid: 1832
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: -2.5,-1.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1922
+=======
+  - uid: 1833
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 1.5,-10.5
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 1923
+=======
+  - uid: 1834
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       pos: 21.5,-1.5
@@ -14527,7 +14915,11 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 2037
+=======
+  - uid: 1947
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -14540,7 +14932,11 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
   - uid: 2038
+=======
+  - uid: 1948
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -14642,6 +15038,19 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: SignGenpop
+  entities:
+  - uid: 336
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 16.5,5.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
 - proto: SignHydro1
   entities:
   - uid: 2048
@@ -14669,6 +15078,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
 - proto: SignPrison
   entities:
   - uid: 2051
@@ -14678,6 +15088,8 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+=======
+>>>>>>> upstream-wizards/master
 - proto: SignScience
   entities:
   - uid: 2052
@@ -14696,6 +15108,17 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+  - uid: 2576
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 18.5,6.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
 - proto: SignSecureSmallRed
   entities:
   - uid: 2054
@@ -14714,6 +15137,18 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: SignShipDock
+  entities:
+  - uid: 1359
+    components:
+    - type: Transform
+      pos: -1.5,-14.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+>>>>>>> upstream-wizards/master
 - proto: SignToolStorage
   entities:
   - uid: 2056
@@ -14723,6 +15158,16 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: Sink
+  entities:
+  - uid: 2620
+    components:
+    - type: Transform
+      pos: 13.5,10.5
+      parent: 2
+>>>>>>> upstream-wizards/master
 - proto: SinkWide
   entities:
   - uid: 2057
@@ -14860,7 +15305,18 @@ entities:
     - type: Transform
       pos: 8.5,0.5
       parent: 2
+<<<<<<< HEAD
 - proto: SpawnPointChiefEngineer
+=======
+- proto: SpawnPointClown
+  entities:
+  - uid: 2640
+    components:
+    - type: Transform
+      pos: -4.5,-2.5
+      parent: 2
+- proto: SpawnPointHeadOfSecurity
+>>>>>>> upstream-wizards/master
   entities:
   - uid: 2077
     components:
@@ -14919,12 +15375,19 @@ entities:
     - type: Transform
       pos: 4.5,-2.5
       parent: 2
+- proto: SpawnPointMime
+  entities:
+  - uid: 2641
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 2
 - proto: SpawnPointMusician
   entities:
   - uid: 2086
     components:
     - type: Transform
-      pos: -4.5,-2.5
+      pos: -6.5,-3.5
       parent: 2
 - proto: SpawnPointObserver
   entities:
@@ -15060,7 +15523,27 @@ entities:
       parent: 2
 - proto: StationMap
   entities:
+<<<<<<< HEAD
   - uid: 2107
+=======
+  - uid: 2497
+    components:
+    - type: Transform
+      pos: 1.5,-8.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 2498
+    components:
+    - type: Transform
+      pos: 4.5,12.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: StatueVenusBlue
+  entities:
+  - uid: 1842
+>>>>>>> upstream-wizards/master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -17365,6 +17848,23 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+<<<<<<< HEAD
+=======
+- proto: WaterTankFull
+  entities:
+  - uid: 2573
+    components:
+    - type: Transform
+      pos: 14.5,7.5
+      parent: 2
+- proto: WaterTankHighCapacity
+  entities:
+  - uid: 2417
+    components:
+    - type: Transform
+      pos: -14.5,5.5
+      parent: 2
+>>>>>>> upstream-wizards/master
 - proto: WeaponCapacitorRecharger
   entities:
   - uid: 2506

@@ -9,7 +9,6 @@ using Content.Shared.Research.Systems;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
-using Content.Server.Station.Systems;
 
 namespace Content.Server.Research.Systems
 {
@@ -24,8 +23,6 @@ namespace Content.Server.Research.Systems
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly RadioSystem _radio = default!;
         [Dependency] private readonly StationSystem _station = default!;
-
-        private static readonly HashSet<Entity<ResearchServerComponent>> ClientLookup = new();
 
         public override void Initialize()
         {
@@ -46,89 +43,12 @@ namespace Content.Server.Research.Systems
         /// <param name="serverUid"></param>
         /// <param name="serverComponent"></param>
         /// <returns></returns>
-        // DS14-edit-start
-        public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)
-        {
-            ClientLookup.Clear();
-
-            var clientXform = Transform(client);
-            if (clientXform.GridUid is not { } grid)
-                return ClientLookup;
-
-            _lookup.GetGridEntities(grid, ClientLookup);
-            return ClientLookup;
-        // DS14-edit-end
-        }
-
-        /// <summary>
-        /// Gets the names of all the servers.
-        /// </summary>
-        /// <returns></returns>
-        public string[] GetServerNames(EntityUid client)
-        {
-            var allServers = GetServers(client).ToArray();
-            var list = new string[allServers.Length];
-
-            for (var i = 0; i < allServers.Length; i++)
-            {
-                list[i] = allServers[i].Comp.ServerName;
-            }
-
-            return list;
-        }
-
-        /// <summary>
-        /// Gets the ids of all the servers
-        /// </summary>
-        /// <returns></returns>
-        public int[] GetServerIds(EntityUid client)
-        {
-            var allServers = GetServers(client).ToArray();
-            var list = new int[allServers.Length];
-
-            for (var i = 0; i < allServers.Length; i++)
-            {
-                list[i] = allServers[i].Comp.Id;
-            }
-
-            return list;
-        }
-
-        // DS14-start
-        public string[] GetServerNames(EntityUid client, bool isTaipan)
-        {
-            var allServers = GetServers(client).ToArray();
-            var list = new List<string>();
-
-            foreach (var server in allServers)
-            {
-                if (server.Comp.isTaipan == isTaipan)
-                    list.Add(server.Comp.ServerName);
-            }
-
-            return list.ToArray();
-        }
-
-        public int[] GetServerIds(EntityUid client, bool isTaipan)
-        {
-            var allServers = GetServers(client).ToArray();
-            var list = new List<int>();
-
-            foreach (var server in allServers)
-            {
-                if (server.Comp.isTaipan == isTaipan)
-                    list.Add(server.Comp.Id);
-            }
-
-            return list.ToArray();
-        }
-
         public bool TryGetServerById(EntityUid client, int id, [NotNullWhen(true)] out EntityUid? serverUid, [NotNullWhen(true)] out ResearchServerComponent? serverComponent)
         {
             serverUid = null;
             serverComponent = null;
 
-            var query = GetServers(client).ToList();
+            var query = GetServers(client);
             foreach (var (uid, server) in query)
             {
                 if (server.Id != id)
@@ -137,9 +57,36 @@ namespace Content.Server.Research.Systems
                 serverComponent = server;
                 return true;
             }
-
             return false;
-        // DS14-end
+        }
+
+        /// <summary>
+        /// Gets the names of all the servers.
+        /// </summary>
+        /// <returns></returns>
+        public string[] GetServerNames(EntityUid client)
+        {
+            return GetServers(client).Select(x => x.Comp.ServerName).ToArray();
+        }
+
+        /// <summary>
+        /// Gets the ids of all the servers
+        /// </summary>
+        /// <returns></returns>
+        public int[] GetServerIds(EntityUid client)
+        {
+            return GetServers(client).Select(x => x.Comp.Id).ToArray();
+        }
+
+        public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)
+        {
+            var clientXform = Transform(client);
+            if (clientXform.GridUid is not { } grid)
+                return [];
+
+            var set = new HashSet<Entity<ResearchServerComponent>>();
+            _lookup.GetGridEntities(grid, set);
+            return set;
         }
 
         public override void Update(float frameTime)

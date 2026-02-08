@@ -38,12 +38,20 @@
 #     proto: SeniorPhysician
 #   equipment:
 #     head: ClothingHeadHatBeretSeniorPhysician
+# Head
+- type: loadout
+  id: SeniorPhysicianBeret
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorPhysician
+  equipment:
+    head: ClothingHeadHatBeretSeniorPhysician
 
 - type: loadout
   id: MedicalHeadMirror
   effects:
   - !type:GroupLoadoutEffect
-    proto: MedicalHeadMirrorTimer
+    proto: MedicalJourneymanTimer
   equipment:
     head: ClothingHeadMirror
 
@@ -163,12 +171,6 @@
 #     proto: SeniorPhysician
 #   equipment:
 #     id: SeniorPhysicianPDA
-
-# Gloves
-- type: loadout
-  id: NitrileGloves
-  equipment:
-    gloves: ClothingHandsGlovesNitrile
 
 #Masks
 - type: loadout

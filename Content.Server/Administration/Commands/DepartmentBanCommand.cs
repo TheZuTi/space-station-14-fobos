@@ -98,12 +98,17 @@ public sealed class DepartmentBanCommand : IConsoleCommand
         var targetUid = located.UserId;
         var targetHWid = located.LastHWId;
 
-        // If you are trying to remove the following variable, please don't. It's there because the note system groups role bans by time, reason and banning admin.
-        // Without it the note list will get needlessly cluttered.
-        var now = DateTimeOffset.UtcNow;
+        var banInfo = new CreateRoleBanInfo(reason);
+        if (minutes > 0)
+            banInfo.WithMinutes(minutes);
+        banInfo.AddUser(targetUid, located.Username);
+        banInfo.WithBanningAdmin(shell.Player?.UserId);
+        banInfo.AddHWId(targetHWid);
+        banInfo.WithSeverity(severity);
+
         foreach (var job in departmentProto.Roles)
         {
-            _banManager.CreateRoleBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, job, minutes, severity, reason, now);
+            banInfo.AddJob(job);
         }
 
         // DS14-bans-weebhook-start
@@ -111,6 +116,7 @@ public sealed class DepartmentBanCommand : IConsoleCommand
         if (_banWebhooksManager != null)
             await _banWebhooksManager.SendDepartmentBan(target, shell.Player, department, reason, minutes);
         // DS14-bans-weebhook-end
+        _banManager.CreateRoleBan(banInfo);
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

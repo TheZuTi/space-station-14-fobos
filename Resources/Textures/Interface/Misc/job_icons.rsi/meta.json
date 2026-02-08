@@ -8,73 +8,49 @@
     },
     "states": [
         {
-            "name": "Detective"
-        },
-        {
-            "name": "QuarterMaster"
-        },
-        {
-            "name": "Botanist"
-        },
-        {
-            "name": "Borg"
-        },
-        {
-            "name": "Boxer"
+            "name": "Admin"
         },
         {
             "name": "AtmosphericTechnician"
         },
         {
-            "name": "Nanotrasen"
+            "name": "Bartender"
         },
         {
-            "name": "Prisoner"
+            "name": "Borg"
         },
         {
-            "name": "Janitor"
+            "name": "Botanist"
         },
         {
-            "name": "Chemist"
+            "name": "Boxer"
         },
         {
-            "name": "StationEngineer"
+            "name": "Brigmedic"
         },
         {
-            "name": "SecurityOfficer"
-        },
-        {
-            "name": "NoId"
-        },
-        {
-            "name": "ChiefMedicalOfficer"
-        },
-        {
-            "name": "Roboticist"
-        },
-        {
-            "name": "Chaplain"
-        },
-        {
-            "name": "Lawyer"
-        },
-        {
-            "name": "Unknown"
-        },
-        {
-            "name": "Librarian"
+            "name": "Captain"
         },
         {
             "name": "CargoTechnician"
         },
         {
-            "name": "Scientist"
+            "name": "CBURN"
         },
         {
-            "name": "ResearchAssistant"
+            "name": "Chaplain"
         },
         {
-            "name": "Geneticist"
+            "name": "Chef"
+        },
+        {
+            "name": "Chemist"
+        },
+        {
+            "name": "ChiefEngineer"
+        },
+        {
+            "name": "ChiefMedicalOfficer"
         },
         {
             "name": "Clown"
@@ -83,58 +59,55 @@
             "name": "Cluwne"
         },
         {
-            "name": "Captain"
+            "name": "Detective"
         },
         {
+            "name": "DeathSquad"
+        },
+        {
+            "name": "ERTChaplain"
+        },
+        {
+            "name": "ERTEngineer"
+        },
+        {
+            "name": "ERTJanitor"
+        },
+        {
+            "name": "ERTLeader"
+        },
+        {
+            "name": "ERTMedical"
+        },
+        {
+            "name": "ERTSecurity"
+        },
+        {
+            "name": "Geneticist"
+        },
+		{
             "name": "HeadOfPersonnel"
-        },
-        {
-            "name": "Virologist"
-        },
-        {
-            "name": "ShaftMiner"
-        },
-        {
-            "name": "Passenger"
-        },
-        {
-            "name": "ChiefEngineer"
-        },
-        {
-            "name": "Bartender"
         },
         {
             "name": "HeadOfSecurity"
         },
         {
-            "name": "Brigmedic"
+            "name": "HeadRevolutionary"
+        },
+        {
+            "name": "InitialInfected"
+        },
+        {
+            "name": "Janitor"
+        },
+        {
+            "name": "Lawyer"
+        },
+        {
+            "name": "Librarian"
         },
         {
             "name": "MedicalDoctor"
-        },
-        {
-            "name": "Paramedic"
-        },
-        {
-            "name": "Chef"
-        },
-        {
-            "name": "Warden"
-        },
-        {
-            "name": "ResearchDirector"
-        },
-        {
-            "name": "Mime"
-        },
-        {
-            "name": "Musician"
-        },
-        {
-            "name": "Reporter"
-        },
-        {
-            "name": "Psychologist"
         },
         {
             "name": "MedicalIntern"
@@ -185,6 +158,9 @@
             "name": "HeadRevolutionary"
         },
         {
+            "name": "Mime"
+        },
+        {
             "name": "Revolutionary"
         },
         {
@@ -221,19 +197,115 @@
         ]
         },
         {
+            "name": "Musician"
+        },
+        {
+            "name": "Nanotrasen"
+        },
+        {
+            "name": "Ninja"
+        },
+        {
+            "name": "NoId"
+        },
+        {
+            "name": "ParadoxClone"
+        },
+        {
+            "name": "Paramedic"
+        },
+        {
+            "name": "Passenger"
+        },
+        {
+            "name": "Pirate"
+        },
+        {
+            "name": "Prisoner"
+        },
+        {
+            "name": "Psychologist"
+        },
+        {
+            "name": "QuarterMaster"
+        },
+        {
+            "name": "Reporter"
+        },
+        {
+            "name": "ResearchAssistant"
+        },
+        {
+            "name": "ResearchDirector"
+        },
+        {
+            "name": "Revolutionary"
+        },
+        {
+            "name": "Roboticist"
+        },
+        {
+            "name": "Scientist"
+        },
+        {
+            "name": "SecurityCadet"
+        },
+        {
+            "name": "SecurityOfficer"
+        },
+        {
+            "name": "SeniorEngineer"
+        },
+        {
+            "name": "SeniorOfficer"
+        },
+        {
+            "name": "SeniorPhysician"
+        },
+        {
+            "name": "SeniorResearcher"
+        },
+        {
+            "name": "ServiceWorker"
+        },
+        {
+            "name": "ShaftMiner"
+        },
+        {
             "name": "StationAi"
+        },
+        {
+            "name": "StationEngineer"
         },
         {
             "name": "Syndicate"
         },
         {
+            "name": "SyndicateCommander"
+        },
+        {
+            "name": "SyndicateCorpsman"
+        },
+        {
+            "name": "SyndicateOperative"
+        },
+        {
+            "name": "TechnicalAssistant"
+        },
+        {
+            "name": "Unknown"
+        },
+        {
+            "name": "Virologist"
+        },
+        {
             "name": "Visitor"
         },
         {
-            "name": "InitialInfected"
+            "name": "Warden"
         },
         {
-            "name": "Admin"
+            "name": "Wizard"
         },
         {
             "name": "ParadoxClone"
@@ -258,6 +330,12 @@
         },
         {
             "name": "ERTLeader"
+        },
+        {
+            "name": "Zookeeper"
+        },
+        {
+            "name": "Zombie"
         }
     ]
 }

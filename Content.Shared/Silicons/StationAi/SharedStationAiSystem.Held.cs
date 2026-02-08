@@ -211,12 +211,9 @@ public abstract partial class SharedStationAiSystem
         _popup.PopupClient(Loc.GetString("ai-device-not-responding"), toEntity, PopupType.MediumCaution);
     }
 
-    private void OnOpenUiCams(Entity<StationAiHeldComponent> ent, ref AIEyeCamerasActionEvent args)
+    private void ShowDeviceNoAccessPopup(EntityUid toEntity)
     {
-        if (!TryComp<ActorComponent>(ent, out var actorComponent))
-            return;
-
-        _uiSystem.TryToggleUi(ent.Owner, AICameraListUiKey.Key, actorComponent.PlayerSession);
+        _popup.PopupClient(Loc.GetString("ai-device-no-access"), toEntity, PopupType.MediumCaution);
     }
 }
 

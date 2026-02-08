@@ -74,6 +74,23 @@
             "name": "oldconcrete-smooth"
         },
         {
+            "name": "ironsandconcrete"
+        },
+        {
+            "name": "ironsandconcrete-mono"
+        },
+        {
+            "name": "ironsandconcrete-smooth"
+        },
+        {
+            "name": "ironsandconcrete-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "ironsandconcrete-inhand-right",
+            "directions": 4
+        },
+        {
             "name": "gcircuit"
         },
         {
@@ -620,6 +637,20 @@
         },
         {
             "name": "asteroid-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "ironsand"
+        },
+        {
+            "name": "astro-ironsand"
+        },
+        {
+            "name": "ironsand-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "ironsand-inhand-left",
             "directions": 4
         },
         {

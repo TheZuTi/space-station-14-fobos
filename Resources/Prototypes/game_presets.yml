@@ -8,12 +8,11 @@
   voteType: rdm # DS14
   description: survival-description
   rules:
-  - WageScheduler # backmen: currency
-  - MeteorSwarmScheduler
-  - RampingStationEventScheduler
-  - SpaceTrafficControlEventScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
-  - BasicRoundstartVariation
+    - MeteorSwarmScheduler
+    - RampingStationEventScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - WageScheduler # backmen: currency
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -55,6 +54,7 @@
   - RampingStationEventScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
+  - Xenoborgs
 
 - type: gamePreset
   id: Extended
@@ -83,9 +83,8 @@
   voteType: admin # DS14
   description: greenshift-description
   rules:
-  - WageScheduler # backmen: currency
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
+  - WageScheduler # backmen: currency p.s я(smiler_009) не ебу нахуй это
 
 - type: gamePreset
   id: Dynamic
@@ -170,7 +169,7 @@
   - WageScheduler # backmen: currency
   - DummyNonAntagChance
   - Traitor
-  - SubGamemodesRule
+  - SubGamemodesRuleNoWizard
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -202,7 +201,8 @@
   rules:
   - WageScheduler # backmen: currency
   - Nukeops
-  # - SubGamemodesRule # DS14
+  - DummyNonAntagChance
+  - SubGamemodesRuleNoWizard
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -221,7 +221,7 @@
   - WageScheduler # backmen: currency
   - DummyNonAntagChance
   - Revolutionary
-  # - SubGamemodesRule # DS14
+  - SubGamemodesRuleNoWizard
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -238,6 +238,22 @@
   - Wizard
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Xenoborgs
+  alias:
+    - xenoborgs
+  name: xenoborgs-title
+  description: xenoborgs-description
+  showInVote: false
+  rules:
+  - Xenoborgs
+  - DummyNonAntagChance
+  - SubGamemodesRuleNoWizardNoXenoborg # no two motherships
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler

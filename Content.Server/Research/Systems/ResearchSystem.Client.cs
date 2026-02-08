@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Research.Components;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Research.Systems;
 
@@ -79,6 +80,8 @@ public sealed partial class ResearchSystem
         if (taipanServers.Count > 0)
             RegisterClient(uid, taipanServers[0], component, taipanServers[0]);
         // DS14-end
+        if (GetServers(uid).FirstOrNull() is { } server)
+            RegisterClient(uid, server, component, server);
     }
 
     private void OnClientShutdown(EntityUid uid, ResearchClientComponent component, ComponentShutdown args)
@@ -98,10 +101,8 @@ public sealed partial class ResearchSystem
             if (ent.Comp.Server is not null)
                 return;
 
-            var allServers = GetServers(ent).ToList();
-
-            if (allServers.Count > 0)
-                RegisterClient(ent, allServers[0], ent, allServers[0]);
+            if (GetServers(ent).FirstOrNull() is { } server)
+                RegisterClient(ent, server, ent, server);
         }
         else
         {

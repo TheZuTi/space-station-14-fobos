@@ -124,6 +124,7 @@
 
 # DS14-start
 - type: startingGear
+  parent: ERTChaplainGearEVA
   id: ERTChaplainGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTChaplain

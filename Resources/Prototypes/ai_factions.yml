@@ -15,6 +15,7 @@
   - SpiderTerror # DS14
   - Blob # DS14
   - SyndicateAgent # DS14-agents-faction
+  - Xenoborg
 
 - type: npcFaction
   id: NanoTrasen
@@ -45,13 +46,14 @@
 
 - type: npcFaction
   id: PetsNT
+  friendly:
+  - NanoTrasen
   hostile:
   - Mouse
   - SimpleHostile
   - Zombie
   - Xeno
   - AllHostile
-  - Wizard
   - Dragon
 
 - type: npcFaction

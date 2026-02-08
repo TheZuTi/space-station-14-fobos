@@ -1,3 +1,4 @@
+using Content.Shared.Body;
 using Content.Shared.Dataset;
 using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Prototypes;
@@ -64,12 +65,6 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public int DefaultHumanSkinTone { get; private set; } = 20;
-
-    /// <summary>
-    ///     The limit of body markings that you can place on this species.
-    /// </summary>
-    [DataField("markingLimits")]
-    public ProtoId<MarkingPointsPrototype> MarkingPoints { get; private set; } = default!;
 
     /// <summary>
     ///     Humanoid species variant used by this entity.

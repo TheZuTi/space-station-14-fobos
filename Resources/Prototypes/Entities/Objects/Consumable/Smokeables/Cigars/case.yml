@@ -58,10 +58,11 @@
     - 0,0,1,1
     storedRotation: 0
 # DS14-end
-  - type: StorageFill
-    contents:
-    - id: Cigar
-      amount: 8
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: Cigar
+        amount: 8
   - type: ItemCounter
     count:
       tags: [Cigar]
@@ -83,10 +84,11 @@
   name: premium cigar case
   description: "A case of premium Havanian cigars. You'll only see heads with these."
   components:
-  - type: StorageFill
-    contents:
-    - id: CigarGold
-      amount: 8
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: CigarGold
+        amount: 8
 # DS14-start
   - type: Sprite
     sprite: _DeadSpace/Objects/Consumable/Smokeables/Cigars/case.rsi
