@@ -17,7 +17,7 @@ public sealed class VoiceMaskBuiState : BoundUserInterfaceState
     public readonly bool Active;
     public readonly bool AccentHide;
 
-    public VoiceMaskBuiState(string name, string? verb, bool active, bool accentHide string voice,)
+    public VoiceMaskBuiState(string name, string? verb, bool active, bool accentHide, string voice)
     {
         Name = name;
         Verb = verb;

@@ -220,11 +220,6 @@ public static class ServerPackaging
 
         var inputPassCore = graph.InputCore;
         var inputPassResources = graph.InputResources;
-        var contentAssemblies = new List<string>(ServerContentAssemblies);
-        // DS14-secrets-start
-        if (UseSecrets)
-            contentAssemblies.AddRange(new[] { "Content.DeadSpace.Shared", "Content.DeadSpace.Server" });
-        // DS14-secrets-end
 
         // Additional assemblies that need to be copied such as EFCore.
         var sourcePath = Path.Combine(contentDir, "bin", "Content.Server");
@@ -232,6 +227,11 @@ public static class ServerPackaging
         var deps = DepsHandler.Load(Path.Combine(sourcePath, "Content.Server.deps.json"));
 
         var contentAssemblies = GetContentAssemblyNamesToCopy(deps);
+
+        // DS14-secrets-start
+        if (UseSecrets)
+            contentAssemblies.AddRange(new[] { "Content.DeadSpace.Shared", "Content.DeadSpace.Server" });
+        // DS14-secrets-end
 
         await RobustSharedPackaging.DoResourceCopy(
             Path.Combine("RobustToolbox", "bin", "Server",
