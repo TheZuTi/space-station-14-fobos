@@ -5,7 +5,7 @@ using Robust.Server.GameObjects;
 using Content.Shared.DeadSpace.Virus.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Actions;
 using Content.Server.Popups;
 using Content.Shared.Popups;
@@ -179,7 +179,7 @@ public sealed class SentientVirusSystem : EntitySystem
             case EvolutionConsoleUiButton.EvolutionBody:
                 {
                     if (args.Body == null
-                        || !_prototypeManager.TryIndex<BodyPrototype>(args.Body, out _)
+                        || !_prototypeManager.TryIndex<SpeciesPrototype>(args.Body, out _)
                         || component.Data == null)
                         return;
 
@@ -216,7 +216,7 @@ public sealed class SentientVirusSystem : EntitySystem
             case EvolutionConsoleUiButton.DeleteBody:
                 {
                     if (args.Body == null
-                        || !_prototypeManager.TryIndex<BodyPrototype>(args.Body, out _)
+                        || !_prototypeManager.TryIndex<SpeciesPrototype>(args.Body, out _)
                         || component.Data == null)
                         return;
 

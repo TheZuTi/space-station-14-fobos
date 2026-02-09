@@ -14,7 +14,7 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.DeadSpace.Virus;
 using Robust.Shared.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 
 namespace Content.Server.DeadSpace.Virus.Systems;
 
@@ -277,7 +277,7 @@ public sealed class VirusSolutionAnalyzerSystem : EntitySystem
 
         SetStatus((console, console.Comp), VirusSolutionAnalyzerStatus.Successfully);
 
-        if (_prototypeManager.Index<BodyPrototype>(body) == null)
+        if (_prototypeManager.Index<SpeciesPrototype>(body) == null)
             return;
 
         if (!TryGetVirusDataFromContainer(console, out var virusDataList))
@@ -325,7 +325,7 @@ public sealed class VirusSolutionAnalyzerSystem : EntitySystem
 
         SetStatus((console, console.Comp), VirusSolutionAnalyzerStatus.Successfully);
 
-        if (_prototypeManager.Index<BodyPrototype>(body) == null)
+        if (_prototypeManager.Index<SpeciesPrototype>(body) == null)
             return;
 
         if (!TryGetVirusDataFromContainer(console, out var virusDataList))

@@ -155,7 +155,6 @@ public static class ServerPackaging
                 });
             }
             // DS14-secrets-end
-            
             if (logBuild)
             {
                 startInfo.ArgumentList.Add($"/bl:{Path.Combine("release", $"server-{platform.Rid}.binlog")}");
@@ -229,8 +228,8 @@ public static class ServerPackaging
         var contentAssemblies = GetContentAssemblyNamesToCopy(deps);
 
         // DS14-secrets-start
-        if (UseSecrets)
-            contentAssemblies.AddRange(new[] { "Content.DeadSpace.Shared", "Content.DeadSpace.Server" });
+        //if (UseSecrets)
+        //    contentAssemblies.AddRange(new[] { "Content.DeadSpace.Shared", "Content.DeadSpace.Server" });
         // DS14-secrets-end
 
         await RobustSharedPackaging.DoResourceCopy(

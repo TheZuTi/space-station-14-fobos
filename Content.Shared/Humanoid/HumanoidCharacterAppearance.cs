@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿﻿using System.Linq;
 using System.Numerics;
 using Content.Shared.Body;
 using Content.Shared.Humanoid.Markings;
@@ -111,51 +111,18 @@ public sealed partial class HumanoidCharacterAppearance : IEquatable<HumanoidCha
         return new(color.RByte, color.GByte, color.BByte);
     }
 
-    public static HumanoidCharacterAppearance EnsureValid(HumanoidCharacterAppearance appearance, ProtoId<SpeciesPrototype> species, Sex sex, string[] sponsorMarkings)
+    public static HumanoidCharacterAppearance EnsureValid(HumanoidCharacterAppearance appearance, ProtoId<SpeciesPrototype> species, Sex sex)
     {
         var eyeColor = ClampColor(appearance.EyeColor);
 
         var proto = IoCManager.Resolve<IPrototypeManager>();
         var markingManager = IoCManager.Resolve<MarkingManager>();
 
-        if (!markingManager.MarkingsByCategory(MarkingCategories.Hair).ContainsKey(hairStyleId))
-        {
-            hairStyleId = HairStyles.DefaultHairStyle;
-        }
-
-        // DS14-sponsors-start
-        if (proto.TryIndex(hairStyleId, out MarkingPrototype? hairProto) &&
-            hairProto.SponsorOnly &&
-            !sponsorMarkings.Contains(hairStyleId))
-        {
-            hairStyleId = HairStyles.DefaultHairStyle;
-        }
-        // DS14-sponsors-end
-
-        if (!markingManager.MarkingsByCategory(MarkingCategories.FacialHair).ContainsKey(facialHairStyleId))
-        {
-            facialHairStyleId = HairStyles.DefaultFacialHairStyle;
-        }
-
-        // DS14-sponsors-start
-        if (proto.TryIndex(facialHairStyleId, out MarkingPrototype? facialHairProto) &&
-            facialHairProto.SponsorOnly &&
-            !sponsorMarkings.Contains(facialHairStyleId))
-        {
-            facialHairStyleId = HairStyles.DefaultFacialHairStyle;
-        }
-        // DS14-sponsors-end
-
-        var markingSet = new MarkingSet();
         var skinColor = appearance.SkinColor;
         var validatedMarkings = appearance.Markings.ShallowClone();
 
         if (proto.TryIndex(species, out var speciesProto))
         {
-            markingSet = new MarkingSet(appearance.Markings, speciesProto.MarkingPoints, markingManager, proto);
-            markingSet.EnsureValid(markingManager);
-            markingSet.FilterSponsor(sponsorMarkings, markingManager); // DS14-sponsors
-
             var strategy = proto.Index(speciesProto.SkinColoration).Strategy;
             var organs = markingManager.GetOrgans(species);
             skinColor = strategy.EnsureVerified(skinColor);
@@ -183,30 +150,12 @@ public sealed partial class HumanoidCharacterAppearance : IEquatable<HumanoidCha
 
                 validatedMarkings[organ] = actualMarkings;
             }
-            markingSet.EnsureSpecies(species, skinColor, markingManager);
-            markingSet.FilterSponsor(sponsorMarkings, markingManager); // DS14-sponsors
-            markingSet.EnsureSexes(sex, markingManager);
         }
 
         return new HumanoidCharacterAppearance(
             eyeColor,
             skinColor,
-            validatedMarkings,
-            markingSet.GetForwardEnumerator().ToList());
-    }
-    // DS14-sponsors-end
-
-    public bool MemberwiseEquals(ICharacterAppearance maybeOther)
-    {
-        if (maybeOther is not HumanoidCharacterAppearance other) return false;
-        if (HairStyleId != other.HairStyleId) return false;
-        if (!HairColor.Equals(other.HairColor)) return false;
-        if (FacialHairStyleId != other.FacialHairStyleId) return false;
-        if (!FacialHairColor.Equals(other.FacialHairColor)) return false;
-        if (!EyeColor.Equals(other.EyeColor)) return false;
-        if (!SkinColor.Equals(other.SkinColor)) return false;
-        if (!Markings.SequenceEqual(other.Markings)) return false;
-        return true;
+            validatedMarkings);
     }
 
     public bool Equals(HumanoidCharacterAppearance? other)

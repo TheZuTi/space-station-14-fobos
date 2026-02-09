@@ -27,8 +27,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Damage.Systems;
 

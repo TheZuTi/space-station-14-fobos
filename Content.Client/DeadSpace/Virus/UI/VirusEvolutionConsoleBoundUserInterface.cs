@@ -1,7 +1,7 @@
 // Мёртвый Космос, Licensed under custom terms with restrictions on public hosting and commercial use, full text: https://raw.githubusercontent.com/dead-space-server/space-station-14-fobos/master/LICENSE.TXT
 
 using System.Linq;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
 using Content.Shared.DeadSpace.Virus;
 using JetBrains.Annotations;
@@ -98,7 +98,7 @@ namespace Content.Client.DeadSpace.Virus.UI
                 return null;
 
             var item = _window.ActiveBodiesList.GetSelected().FirstOrDefault();
-            if (item?.Metadata is ProtoId<BodyPrototype> id)
+            if (item?.Metadata is ProtoId<SpeciesPrototype> id)
                 return id.Id;
 
             return null;

@@ -1,6 +1,6 @@
 // Мёртвый Космос, Licensed under custom terms with restrictions on public hosting and commercial use, full text: https://raw.githubusercontent.com/dead-space-server/space-station-14-fobos/master/LICENSE.TXT
 
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -18,7 +18,7 @@ public sealed class VirusEvolutionConsoleBoundUserInterfaceState : BoundUserInte
     public bool SolutionAnalyzerInRange { get; }
     public bool HasVirus { get; }
     public List<ProtoId<VirusSymptomPrototype>> ActiveSymptoms = new();
-    public List<ProtoId<BodyPrototype>> BodyWhitelist = new();
+    public List<ProtoId<SpeciesPrototype>> BodyWhitelist = new();
 
     // Статистика вируса
     public bool IsSentientVirus { get; }
@@ -36,7 +36,7 @@ public sealed class VirusEvolutionConsoleBoundUserInterfaceState : BoundUserInte
         bool solutionAnalyzerInRange,
         bool hasVirus = false,
         List<ProtoId<VirusSymptomPrototype>>? activeSymptoms = null,
-        List<ProtoId<BodyPrototype>>? bodyWhitelist = null,
+        List<ProtoId<SpeciesPrototype>>? bodyWhitelist = null,
         float maxThreshold = 100f,
         float infectivity = 0f,
         int infectedCount = 0,
@@ -50,7 +50,7 @@ public sealed class VirusEvolutionConsoleBoundUserInterfaceState : BoundUserInte
         DataServerInRange = dataServerInRange;
         SolutionAnalyzerInRange = solutionAnalyzerInRange;
         ActiveSymptoms = activeSymptoms ?? new List<ProtoId<VirusSymptomPrototype>>();
-        BodyWhitelist = bodyWhitelist ?? new List<ProtoId<BodyPrototype>>();
+        BodyWhitelist = bodyWhitelist ?? new List<ProtoId<SpeciesPrototype>>();
         IsSentientVirus = isSentientVirus;
         HasVirus = hasVirus;
         MaxThreshold = maxThreshold;

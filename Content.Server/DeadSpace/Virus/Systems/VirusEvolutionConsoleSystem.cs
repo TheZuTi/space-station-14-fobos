@@ -12,7 +12,7 @@ using Content.Server.DeadSpace.Virus.Components;
 using Content.Shared.DeadSpace.Virus.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 
 namespace Content.Server.DeadSpace.Virus.Systems;
 
@@ -87,7 +87,7 @@ public sealed class VirusEvolutionConsoleSystem : EntitySystem
             case EvolutionConsoleUiButton.EvolutionBody:
                 {
                     if (args.Body == null
-                        || !_prototypeManager.TryIndex<BodyPrototype>(args.Body, out _)
+                        || !_prototypeManager.TryIndex<SpeciesPrototype>(args.Body, out _)
                         || virusData == null)
                         return;
 
@@ -119,7 +119,7 @@ public sealed class VirusEvolutionConsoleSystem : EntitySystem
             case EvolutionConsoleUiButton.DeleteBody:
                 {
                     if (args.Body == null
-                        || !_prototypeManager.TryIndex<BodyPrototype>(args.Body, out _)
+                        || !_prototypeManager.TryIndex<SpeciesPrototype>(args.Body, out _)
                         || virusData == null)
                         return;
 

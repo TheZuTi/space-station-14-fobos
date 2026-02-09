@@ -21,7 +21,7 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.DeadSpace.Virus;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 
 namespace Content.Server.DeadSpace.Virus.Systems;
 
@@ -234,7 +234,7 @@ public sealed class VirusDiagnoserSystem : EntitySystem
             var names = new List<string>();
             foreach (var protoId in data.BodyWhitelist)
             {
-                if (_prototypeManager.TryIndex(protoId, out BodyPrototype? sp))
+                if (_prototypeManager.TryIndex(protoId, out SpeciesPrototype? sp))
                 {
                     // используем локализованное имя, если доступно; иначе ID
                     var display = sp?.Name ?? protoId.ToString();

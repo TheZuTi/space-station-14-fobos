@@ -3,7 +3,7 @@
 using Content.Shared.DeadSpace.Virus.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.DeadSpace.Virus.Symptoms;
 using System.Linq;
 using Content.Shared.DeadSpace.TimeWindow;
@@ -51,7 +51,7 @@ public struct BaseVirusSettings
     /// <summary>
     ///     Список не доступных для покупки тел.
     /// </summary>
-    public static readonly List<ProtoId<BodyPrototype>> BodyBlackList = new List<ProtoId<BodyPrototype>>
+    public static readonly List<ProtoId<SpeciesPrototype>> BodyBlackList = new List<ProtoId<SpeciesPrototype>>
     {
         "AnimalNymphBrain",
         "AnimalNymphLungs",
@@ -136,7 +136,7 @@ public abstract partial class SharedVirusSystem : EntitySystem
         return Math.Max(1, data.BodyWhitelist.Count) * BaseVirusSettings.StaticBodyPrice;
     }
 
-    public int GetBodyPrice(List<ProtoId<BodyPrototype>> bodyWhitelist)
+    public int GetBodyPrice(List<ProtoId<SpeciesPrototype>> bodyWhitelist)
     {
         return Math.Max(1, bodyWhitelist.Count) * BaseVirusSettings.StaticBodyPrice;
     }

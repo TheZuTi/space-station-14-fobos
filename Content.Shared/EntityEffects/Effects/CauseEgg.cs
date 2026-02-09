@@ -9,7 +9,7 @@ using Content.Shared.DeadSpace.Abilities.Egg.Components;
 
 namespace Content.Shared.EntityEffects.Effects;
 
-public sealed partial class CauseEgg : EventEntityEffect<CauseEgg>
+public sealed partial class CauseEgg : EntityEffectBase<CauseEgg>
 {
     [DataField("spawned", required: true)]
     public List<EntitySpawnEntry> SpawnedEntities = new();

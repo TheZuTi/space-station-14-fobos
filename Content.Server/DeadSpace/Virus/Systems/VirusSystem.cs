@@ -20,7 +20,7 @@ using Content.Shared.Mobs;
 using Content.Server.DeadSpace.Virus.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Interaction;
 using Content.Shared.Physics;
@@ -523,7 +523,7 @@ public sealed partial class VirusSystem : SharedVirusSystem
         if (bodyCount > 0)
         {
             var availableBodies = _prototype
-                .EnumeratePrototypes<BodyPrototype>()
+                .EnumeratePrototypes<SpeciesPrototype>()
                 .Select(p => p.ID)
                 .Where(id => !BaseVirusSettings.BodyBlackList.Contains(id) && !data.BodyWhitelist.Contains(id))
                 .ToList();

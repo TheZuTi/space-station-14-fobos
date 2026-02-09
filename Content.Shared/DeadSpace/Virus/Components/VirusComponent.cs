@@ -8,7 +8,7 @@ using System.Linq;
 using Robust.Shared.Serialization;
 using Content.Shared.DeadSpace.Virus.Prototypes;
 using Content.Shared.DeadSpace.TimeWindow;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Mobs;
 using Robust.Shared.GameStates;
 using Content.Shared.StatusIcon;
@@ -160,7 +160,7 @@ public sealed partial class VirusData : ReagentData
     ///     Допустимые к заражению расы.
     /// </summary>
     [DataField]
-    public List<ProtoId<BodyPrototype>> BodyWhitelist = new();
+    public List<ProtoId<SpeciesPrototype>> BodyWhitelist = new();
 
     public VirusData()
     {

@@ -15,7 +15,7 @@ using System.Linq;
 using Robust.Shared.Prototypes;
 using Content.Shared.Destructible;
 using Content.Shared.DeadSpace.Virus.Prototypes;
-using Content.Shared.Body.Prototypes;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.DeadSpace.Virus;
 
 namespace Content.Server.DeadSpace.Virus.Systems;
@@ -40,7 +40,7 @@ public sealed class VirusMutationSystem : EntitySystem
     /// <summary>
     ///     Список всех body и симптомов, да, при загрузке прототипа body его тут не будет.
     /// </summary>
-    private List<ProtoId<BodyPrototype>> _allBodyCache = new();
+    private List<ProtoId<SpeciesPrototype>> _allBodyCache = new();
     private List<ProtoId<VirusSymptomPrototype>> _allSymptomsCache = new();
 
 
@@ -54,7 +54,7 @@ public sealed class VirusMutationSystem : EntitySystem
 
         _sawmill = _logManager.GetSawmill("VirusMutationSystem");
 
-        foreach (var proto in _prototype.EnumeratePrototypes<BodyPrototype>())
+        foreach (var proto in _prototype.EnumeratePrototypes<SpeciesPrototype>())
         {
             if (!BaseVirusSettings.BodyBlackList.Contains(proto.ID))
                 _allBodyCache.Add(proto.ID);

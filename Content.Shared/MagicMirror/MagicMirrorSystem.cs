@@ -34,6 +34,7 @@ public sealed class MagicMirrorSystem : EntitySystem
         SubscribeLocalEvent<MagicMirrorComponent, AfterInteractEvent>(OnMagicMirrorInteract);
         SubscribeLocalEvent<MagicMirrorComponent, BeforeActivatableUIOpenEvent>(OnBeforeUIOpen);
         SubscribeLocalEvent<MagicMirrorComponent, ActivatableUIOpenAttemptEvent>(OnAttemptOpenUI);
+        SubscribeLocalEvent<MagicMirrorComponent, BeforeIntrinsicUIOpenEvent>(OnBeforeIntrinsicUIOpen); // DS14-slimeperson-internal-magic-mirror
 
         Subs.BuiEvents<MagicMirrorComponent>(MagicMirrorUiKey.Key,
             subs =>
@@ -46,6 +47,12 @@ public sealed class MagicMirrorSystem : EntitySystem
 
         SubscribeLocalEvent<MagicMirrorComponent, BoundUserInterfaceCheckRangeEvent>(OnMirrorRangeCheck);
     }
+    // DS14-slimeperson-internal-magic-mirror-start
+    private void OnBeforeIntrinsicUIOpen(Entity<MagicMirrorComponent> ent, ref BeforeIntrinsicUIOpenEvent args)
+    {
+        UpdateInterface(ent, args.User);
+    }
+    // DS14-slimeperson-internal-magic-mirror-end
 
 
     private void OnMagicMirrorSelect(Entity<MagicMirrorComponent> ent, ref MagicMirrorSelectMessage args)
@@ -151,6 +158,13 @@ public sealed class MagicMirrorSystem : EntitySystem
 
     private void OnMirrorRangeCheck(EntityUid uid, MagicMirrorComponent component, ref BoundUserInterfaceCheckRangeEvent args)
     {
+        // DS14-slimeperson-internal-magic-mirror-start
+        if (component.Internal)
+        {
+            args.Result = BoundUserInterfaceRangeResult.Pass;
+            return;
+        }
+        // DS14-slimeperson-internal-magic-mirror-end
         if (args.Result == BoundUserInterfaceRangeResult.Fail)
             return;
 
